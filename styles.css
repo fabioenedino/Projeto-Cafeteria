@@ -254,4 +254,57 @@ section {
     height: 7rem;
 }
 
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 48%;
+    }
+  
+    .header .navbar {
+        display: none;    
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg);
+        flex-direction: column; 
+        padding: 1rem 2rem;  
+        border-top: var(--border);
+        border-bottom: var(--border); 
+    }
+
+    .header .navbar.active {
+        display: flex;        
+    }
+
+    .header .navbar a {
+        padding: 1.2rem 0;
+        margin: 0;
+        font-size: 2rem;
+        border-bottom: var(--border);
+    }
+
+    .header .icons {
+        display: none;
+    }
+
+
+    .menu-btn {
+        display: flex;
+    }
+}
+    
